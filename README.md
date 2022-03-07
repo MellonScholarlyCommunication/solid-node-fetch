@@ -55,7 +55,7 @@ node bin/solid-fetch.js -c etc/demo.json -h 'Content-Type: text/turtle' \
 
 node bin/solid-fetch.js -c etc/demo.json -m GET http://localhost:3000/
 
-node bin/solid-fetch.js -c etc/demo.json -m DELETE http://localhost:3000/
+node bin/solid-fetch.js -c etc/demo.json -m DELETE http://localhost:3000/test.ttl
 ```
 
 ### Node
