@@ -1,0 +1,5 @@
+{
+  "email": "test@test.edu",
+  "password": "test",
+  "idp": "http://localhost:3000"
+}

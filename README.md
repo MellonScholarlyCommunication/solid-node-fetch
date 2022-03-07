@@ -34,9 +34,9 @@ The process requires at least the following values to be present
 These values can be passed using command line options, or passed through a config file of the format: 
 ```
 {
-  email: <user email>,
-  password: <user password>,
-  idp: <user identity provider> // This is e.g. "http://localhost:3000" for a locally hosted data pod server.
+  "email": "<user email>",
+  "password": "<user password>",
+  "idp": "<user identity provider>" // This is e.g. "http://localhost:3000" for a locally hosted data pod server.
 }
 ```
 Missing values in the command line options will be filled from the passed config file.
