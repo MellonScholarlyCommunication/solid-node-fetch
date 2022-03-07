@@ -34,9 +34,9 @@ The process requires at least the following values to be present
 These values can be passed using command line options, or passed through a config file of the format: 
 ```
 {
-  email: <user email>,
-  password: <user password>,
-  idp: <user identity provider> // This is e.g. "http://localhost:3000" for a locally hosted data pod server.
+  "email": "<user email>",
+  "password": "<user password>",
+  "idp": "<user identity provider>" // This is e.g. "http://localhost:3000" for a locally hosted data pod server.
 }
 ```
 Missing values in the command line options will be filled from the passed config file.
@@ -47,6 +47,16 @@ All parameters accepted by the internal fetch function can be passed using the c
 node bin/solid-fetch.js --help
 ```
 
+For instance:
+
+```
+node bin/solid-fetch.js -c etc/demo.json -h 'Content-Type: text/turtle' \
+          -m PUT -b '<ex:s1> <ex:p1> <ex:o1>.'  http://localhost:3000/test.ttl
+
+node bin/solid-fetch.js -c etc/demo.json -m GET http://localhost:3000/
+
+node bin/solid-fetch.js -c etc/demo.json -m DELETE http://localhost:3000/test.ttl
+```
 
 ### Node
 This library can be called directly from your own Nodejs projects.
